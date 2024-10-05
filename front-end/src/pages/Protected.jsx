@@ -22,7 +22,7 @@ export default function Protected() {
 
     // Fetch protected data
     axios
-      .get("http://localhost:4001/user/protected", {
+      .get("http://localhost:4000/user/protected", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
@@ -49,7 +49,7 @@ export default function Protected() {
     // Send a request to the logout route with the refresh token (optional)
     if (refreshToken) {
       axios
-        .post("http://localhost:4001/user/logout", { refreshToken })
+        .post("http://localhost:4000/user/logout", { refreshToken })
         .then((response) => {
           console.log(response.data.message); // Log success message
         })

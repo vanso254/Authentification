@@ -105,7 +105,7 @@ router.post("/login", async (req, res) => {
 });
 
 
-router.post("/token", async (req, res) => {
+router.post("/refresh", async (req, res) => {
   try {
     // Extract the refresh token from the request body
     const { refreshToken } = req.body;

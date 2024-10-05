@@ -8,7 +8,7 @@ export default function Register(){
 
   // Define the mutation using useMutation
   const mutation = useMutation({
-    mutationFn: (data) => axios.post('http://localhost:4001/user/register', data),
+    mutationFn: (data) => axios.post('http://localhost:4000/user/register', data),
     onSuccess: () => {
       // Redirect to login after successful registration
       navigate('/login');

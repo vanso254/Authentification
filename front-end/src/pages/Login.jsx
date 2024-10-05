@@ -10,7 +10,7 @@ export default function Login() {
 
   // Place your useMutation hook inside the component
   const mutation = useMutation({
-    mutationFn: (data) => axios.post('http://localhost:4001/user/login', data),
+    mutationFn: (data) => axios.post('http://localhost:4000/user/login', data),
     onSuccess: (response) => {
       console.log("Login response:", response.data); // Log the entire response
       const { accessToken, refreshToken } = response.data; // Extract access and refresh tokens
